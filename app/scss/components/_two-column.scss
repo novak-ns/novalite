@@ -1,0 +1,43 @@
+.two-column {
+  border-top: 1px solid #DEDEDE;
+  .container {
+    margin-top: 60px;
+    margin-bottom: 105px;
+    .two-column-left {
+      width: calc(50% - 70px);
+      .section-title {
+        margin-bottom: 32.5px;
+      }
+      p {
+        font-family: $font-second;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: $semi-black;
+        max-width: 488px;
+        &:first-of-type {
+          margin-bottom: 15px;
+        }
+      }
+      a {
+        margin-top: 24.5px;
+        font-family: $font-main;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        color: $orange;
+        padding: 11px 32px;
+        border: 1px solid #DEDEDE;
+        border-radius: 4px;
+        transition: $transition-ease;
+        &:hover {
+          background-color: $orange;
+          color: $white;
+        }
+      }
+    }
+    .two-column-right {
+      width: calc(50% - 70px);
+    }
+  }
+}
