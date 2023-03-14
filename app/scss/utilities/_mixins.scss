@@ -16,14 +16,14 @@
   }
 }
 
-@mixin lg-1199 {
-  @media screen and (max-width: 1199px) {
+@mixin lg-1250 {
+  @media screen and (max-width: 1250px) {
       @content;
   }
 }
 
-@mixin md-991 {
-  @media screen and (max-width: 991px) {
+@mixin md-1060 {
+  @media screen and (max-width: 1060px) {
       @content;
   }
 }

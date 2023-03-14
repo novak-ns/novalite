@@ -7,9 +7,21 @@ body {
 }
 
 .container {
-    max-width: 1215px;
-    margin: 0 auto;
-    width: 100%;
+  max-width: 1215px;
+  margin: 0 auto;
+  width: 100%;
+  @include lg-1250 {
+    max-width: 1024px;
+  }
+  @include md-1060 {
+    max-width: 740px;
+  }
+  @include sm-767 {
+    max-width: 500px;
+  }
+  @include mb-555 {
+    max-width: 328px;
+  }
 }
 
 

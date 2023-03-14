@@ -1,6 +1,7 @@
 .multiple-rows {
   background-color: $light-gray;
   .container {
+    margin-bottom: 88px;
     .section-title {
       margin-bottom: 33px;
     }
@@ -18,11 +19,7 @@
           }
         }
         &:last-of-type {
-          width: auto;
-          span {
-            width: 100%;
-            padding-right: 100%;
-          }
+          width: 100%;
         }
         h3 {
           padding-left: 50px;
@@ -32,6 +29,7 @@
           line-height: 24px;
           color: $orange;
           margin-bottom: 16px;
+          white-space: nowrap;
         }
         span {
           min-height: 40px;
@@ -43,13 +41,21 @@
           font-size: 14px;
           line-height: 24px;
           color: $semi-black;
-          &:last-of-type {
-            margin-bottom: 88px;
-          }
+          white-space: nowrap;
           &:nth-child(even) {
             background-color: $white;
           }
         }
+      }
+    }
+  }
+}
+
+@include md-1060 {
+  .multiple-rows {
+    .container {
+      .multiple-rows-items {
+        overflow-x: auto;
       }
     }
   }

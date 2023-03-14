@@ -3,8 +3,11 @@
   .container {
     margin-top: 60px;
     margin-bottom: 105px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     .two-column-left {
-      width: calc(50% - 70px);
+      width: auto;
       .section-title {
         margin-bottom: 32.5px;
       }
@@ -37,7 +40,74 @@
       }
     }
     .two-column-right {
-      width: calc(50% - 70px);
+      width: 592px;
+      height: 444px;
+      position: relative;
+      img {
+        position: absolute;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+@include lg-1250 {
+  .two-column {
+    .container {
+      .two-column-right {
+        width: 492px;
+      }
+    }
+  }
+}
+
+@include md-1060 {
+  .two-column {
+    .container {
+      flex-direction: column;
+      .two-column-left {
+        p {
+          max-width: 100%;
+        }
+      }
+      .two-column-right {
+        margin-top: 50px;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@include sm-767 {
+  .two-column {
+    .container {
+      flex-direction: column-reverse;
+      max-width: 100%;
+      .two-column-left {
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .two-column-right {
+        margin-top: 0;
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
+
+@include mb-555 {
+  .two-column {
+    .container {
+      max-width: 100%;
+      .two-column-left {
+        max-width: 328px;
+      }
+      .two-column-right {
+        height: 280px;
+      }
     }
   }
 }
