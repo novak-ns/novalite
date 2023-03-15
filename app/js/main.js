@@ -20,7 +20,6 @@ const search = document.getElementById('search-bar-search');
         }
 
 
-
         $(document).ready(function(){
   
           $('.contact').on('click', function(e) {
@@ -47,3 +46,7 @@ const search = document.getElementById('search-bar-search');
 
 
 
+
+          $(document).ready(function () {
+            document.getElementById("contact").click();
+          });
