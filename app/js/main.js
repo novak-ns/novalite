@@ -37,13 +37,6 @@ const search = document.getElementById('search-bar-search');
             $('body').removeClass("active");
           });
 
-          $('.send').on('click', function(e) {
-            e.preventDefault();
-            $('.tooltip').removeClass("open");
-            $('body').removeClass("fixed-class");
-            $('body').removeClass("active");
-          });
-
           $('.exit').on('click', function(e) {
             e.preventDefault();
             $('.tooltip').removeClass("open");
