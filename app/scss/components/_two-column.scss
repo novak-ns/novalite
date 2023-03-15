@@ -2,7 +2,7 @@
   border-top: 1px solid #DEDEDE;
   .container {
     margin-top: 60px;
-    margin-bottom: 105px;
+    margin-bottom: 66px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -101,12 +101,17 @@
 @include mb-555 {
   .two-column {
     .container {
+      margin-top: 40px;
       max-width: 100%;
       .two-column-left {
-        max-width: 328px;
+        max-width: 327px;
+        .section-title {
+          margin-bottom: 23px;
+        }
       }
       .two-column-right {
         height: 280px;
+        margin-bottom: 25px;
       }
     }
   }

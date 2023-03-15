@@ -12,7 +12,7 @@
   <title>Novalite</title>
 </head>
 
-<body id="body">
+<body id="body" class="body">
   <!-- Site Header Start -->
   <header class="site-header" id="site-header">
     <div class="container flex--row">
@@ -22,12 +22,12 @@
           <li class="active"><a href="#">Products</a></li>
           <li><a href="#">Services</a></li>
           <li><a href="#">About us</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#" id="contact" class="contact">Contact</a></li>
         </ul>
         <div class="search-bar flex--row">
 					<input type="text" placeholder="Search">
 					<div class="search-bar-link">
-						<a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+						<a href="#" id="search-bar-search"><i class="fa-solid fa-magnifying-glass"></i></a>
 					</div>
 				</div>
       </div>
@@ -48,34 +48,49 @@
   <!-- Site Header End -->
   <!-- Start Site Main Content -->
   <main>
+    <section class="tooltip">
+      <div class="tooltip-content"  >
+        <div class="tooltip-content-container">
+          <h2 class="section-title">Contact us</h2>
+          <p>We'll get back to you as soon as possible.</p>
+          <input placeholder="Your e-mail" type="email" id="emails" name="emails">
+          <textarea placeholder="Your message" name="comment" form="usrform"></textarea>
+          <div class="tooltip-buttons">
+            <a class="close" href="#">Cancel</a>
+            <a class="send" href="#">Send message</a>
+          </div>
+        </div>
+        <span   class="exit"><i class="fa-solid fa-xmark"></i></span>
+      </div>
+    </section>
     <section class="breadcrumbs">
       <div class="container">
-      <ul>
+      <ul class="flex--row">
         <li><a href="#">Home</a><i class="fa-solid fa-angle-right"></i></li>
-        <li><a href="#">Produucts</a><i class="fa-solid fa-angle-right"></i></li>
+        <li><a href="#">Products</a><i class="fa-solid fa-angle-right"></i></li>
         <li><a href="#">Bikes</a><i class="fa-solid fa-angle-right"></i></li>
       </ul>
       </div>
     </section>
     <section class="single-product">
       <div class="container">
-        <div class="single-product-top">
-          <h1>Product name lorem ipsum</h1>
-          <ul>
+        <div class="single-product-top flex--row flex--between">
+          <h1 class="main-title">Product name lorem ipsum</h1>
+          <ul class="flex--row">
             <li><a href="#"><i class="fa-solid fa-arrow-left"></i></a></li>
             <li><a href="#"><i class="fa-solid fa-arrow-right"></i></a></li>
             <li><a href="#"><i class="fa-regular fa-heart"></i></a></li>
             <li><a href="#"><i class="fa-solid fa-share-nodes"></i></a></li>
           </ul>
         </div>
-        <div class="single-product-bottom">
+        <div class="single-product-bottom flex--row flex--between">
           <div class="single-product-bottom-left">
             <div class="single-product-bottom-left-items">
               <div class="single-product-bottom-left-item">
-                <img src="" alt="Can not show image.">
+                <img src="images/single-item/bicycle.jpg" alt="Can not show image.">
               </div>
               <div class="single-product-bottom-left-item">
-                <img src="" alt="Can not show image.">
+                <img src="images/single-item/bicycle.jpg" alt="Can not show image.">
               </div>
             </div>
             <div class="arrow_prev">
@@ -86,38 +101,57 @@
             </div>
           </div>
           <div class="single-product-bottom-right">
-            <p>In stock <span>- only 2 left</span></p>
-            <p>
-              Duis aute irure dolor in reprehenderit in voluptate velit esse 
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
-              cupidatat non proident, sunt in culpa qui officia deserunt mollit
-               anim id est laborum.
-            </p>
-            <form class="drop-down">
-              <label for="model">Model</label>
-              <select name="Model" id="model">
-                <option value="">Gents - Medium</option>
-                <option value="">Gents - Medium</option>
-                <option value="">Gents - Medium</option>
-                <option value="">Gents - Medium</option>
-              </select>
-              <label for="color">Color</label>
-              <select name="color" id="color">
-                <option value="">Black</option>
-                <option value="">Black</option>
-                <option value="">Black</option>
-                <option value="">Black</option>
-              </select>
-            </form>
-            <form class="checkbox">
-              <input type="checkbox"> Add option lorem ipsum
-              <input type="checkbox"> Add option autpat velit cano totam rem aperiam 
-            </form>
-            <div class="single-product-bottom-right-buttons">
-              <a href="#">Add to cart</a>
-              <a href="#">Contact us</a>
+            <div class="single-product-bottom-right-content">
+              <p>In stock <span>- only 2 left</span></p>
+              <p>
+                Duis aute irure dolor in reprehenderit in voluptate velit esse 
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
+                cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                 anim id est laborum.
+              </p>
+              <form class="drop-down">
+                <div class="drop-down-left flex--column">
+                  <label for="model">Model</label>
+                  <select name="Model" id="model">
+                    <option value="">Gents - Medium</option>
+                    <option value="">Gents - Small</option>
+                    <option value="">Gents - Large</option>
+                    <option value="">Gents - Medium</option>
+                  </select>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="drop-down-right flex--column">
+                  <label for="color">Color</label>
+                  <select name="color" id="color">
+                    <option value="">Black</option>
+                    <option value="">Red</option>
+                    <option value="">Blue</option>
+                    <option value="">White</option>
+                  </select>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </div>
+              </form>
+              <label class="container-checkbox">Add option lorem ipsum
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+              <label class="container-checkbox">Add option autpat velit cano totam rem aperiam
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+              <div class="single-product-bottom-right-buttons flex--row">
+                <a href="#">Add to cart</a>
+                <a href="#">Contact us</a>
+              </div>
             </div>
           </div>
+        </div>
+        <div class="tabs">
+          <ul class="flex--row">
+            <li><a href="#">Description</a></li>
+            <li><a href="#">Specifications</a></li>
+            <li><a href="#">Reviews (7)</a></li>
+          </ul>
         </div>
       </div>
     </section>

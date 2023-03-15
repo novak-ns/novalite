@@ -1,7 +1,21 @@
+.main-title {
+  font-family: $font-main;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+}
+
 .section-title {
   font-family: $font-main;
   font-weight: 600;
   font-size: 28px;
   line-height: 36px;
   color: $semi-black;
+}
+
+@include sm-767 {
+  .section-title {
+    font-size: 24px;
+    line-height: 32px;
+  }
 }

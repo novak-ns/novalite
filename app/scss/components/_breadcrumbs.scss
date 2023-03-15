@@ -1,0 +1,39 @@
+.breadcrumbs {
+  margin-top: 160px;
+  margin-bottom: 20px;
+  .container {
+    height: 100%;
+    ul {
+      li {
+        a {
+          font-family: $font-second;
+          font-size: 13px;
+          font-weight: 400;
+          line-height: 18px;
+          color: $semi-black;
+          transition: $transition-ease;
+          &:hover {
+            color: $orange;
+          }
+        }
+        i {
+          margin-left: 12px;
+          margin-right: 13px;
+          font-size: 12px;
+          color: $semi-black;
+        }
+        &:last-of-type {
+          a {
+            pointer-events: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include md-1060 {
+  .breadcrumbs {
+    margin-top: 100px;
+  }
+}
